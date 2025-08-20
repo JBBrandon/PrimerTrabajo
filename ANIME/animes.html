@@ -8,74 +8,39 @@
 </head>
 <body>
     <div class="container">
-        <header class="header-principal">
-            <!-- HU-01: Imagen y título del encabezado -->
-            <div class="header-content">
-                <div class="header-image">
-                    <img src="imagenes/naruto.png" alt="Anime Conti Banner" class="banner-image">
-                </div>
-                <div class="header-text">
-                    <h1 class="titulo-principal">🎌 Anime Conti 🎌</h1>
-                    <p class="subtitulo">Tu portal de anime favorito</p>
-                </div>
+        <!-- Encabezado principal con logo y navegación -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBmaWxsPSIjNjQ5NWVkIj48cGF0aCBkPSJNNDQ4IDBINjRDMjguNyAwIDAgMjguNyAwIDY0djM4NGMwIDM1LjMgMjguNyA2NCA2NCA2NGgzODRjMzUuMyAwIDY0LTI4LjcgNjQtNjRWNjRjMC0zNS4zLTI4LjctNjQtNjQtNjR6bS0yODAgMzg2LjJjLTY3LjYgMC0xMjIuNS01NC44LTEyMi41LTEyMi41czU0LjktMTIyLjUgMTIyLjUtMTIyLjVjNDIuOCAwIDgwLjggMjEuOCAxMDIuNyA1OC4ybC04Ni43IDUwLjJjLTcuMy0xMy40LTIxLjUtMjIuNy0zOC0yMi43LTI0LjEgMC00My43IDE5LjYtNDMuNyA0My43czE5LjYgNDMuNyA0My43IDQzLjdjMTYuNSAwIDMwLjctOS4zIDM4LTIyLjhsODYuNyA1MC4yYy0yMS45IDM2LjMtNTkuOSA1OC4zLTEwMi43IDU4LjN6bTI0OS41LTExLjhsLTQ0LjEtNDQuMSAyMS4zLTIxLjMgNDQuMiA0NC4yTzQ0OCAyNTZsLTQ0LjEtNDQuMUw0MTcgMTUybC00NC4yIDQ0LjJMMzI4LjcgMTUybC0yMS4zIDIxLjMgNDQuMSA0NC4xLTQ0LjEgNDQuMSAyMS4zIDIxLjMgNDQuMi00NC4yTDQxNyAzMDRsNDQuMS00NC4xeiIvPjwvc3ZnPg==" alt="Logo AnimeVision">
+                <h1>Anime Conti</h1>
             </div>
-        </header>
+            
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Series</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
         
         <main>
-            <!-- HU-02: Sinopsis breve del anime -->
-            <section class="seccion-sinopsis">
-                <h2>¿Qué es Anime Conti?</h2>
-                <div class="sinopsis-content">
-                    <p class="sinopsis-texto">
-                        Anime Conti es tu destino definitivo para descubrir y disfrutar de los mejores animes japoneses. 
-                        Desde clásicos legendarios hasta las últimas novedades, ofrecemos una experiencia única con 
-                        episodios completos, reseñas detalladas y una comunidad apasionada por el anime.
-                    </p>
-                    
-                </div>
-            </section>
-
             <section class="seccion-anime">
                 <h2>Animes Populares</h2>
                 <div class="lista-animes">
                     <div class="anime-card">
-                        <div class="anime-image">
-                            <img src="imagenes/naruto.png" alt="Naruto" class="anime-img">
-                        </div>
                         <h3>Naruto</h3>
                         <p>Ninja legendario en busca de su destino</p>
-                        <button class="btn-ver-episodios" onclick="irAepisodiosAnime('naruto')">
-                            🎬 Ver Episodios
-                        </button>
                     </div>
                     <div class="anime-card">
-                        <div class="anime-image">
-                            <img src="imagenes/dragon.png" alt="Dragon Ball" class="anime-img">
-                        </div>
                         <h3>Dragon Ball</h3>
                         <p>Aventuras épicas del guerrero Saiyajin</p>
-                        <button class="btn-ver-episodios" onclick="irAepisodiosAnime('dragonball')">
-                            🎬 Ver Episodios
-                        </button>
                     </div>
                     <div class="anime-card">
-                        <div class="anime-image">
-                            <img src="imagenes/onepiace.png" alt="One Piece" class="anime-img">
-                        </div>
                         <h3>One Piece</h3>
                         <p>Búsqueda del tesoro más grande del mundo</p>
-                        <button class="btn-ver-episodios" onclick="irAepisodiosAnime('onepiece')">
-                            🎬 Ver Episodios
-                        </button>
                     </div>
-                </div>
-                
-                <!-- HU-03: Botón para explorar más contenido -->
-                <div class="boton-explorar">
-                    <button class="btn-episodios" onclick="irAepisodios()">
-                        🎬 Ver Todos los Episodios
-                    </button>
-                    <p class="texto-boton">Descubre cientos de episodios de tus animes favoritos</p>
                 </div>
             </section>
         </main>
