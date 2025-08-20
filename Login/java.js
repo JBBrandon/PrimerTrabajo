@@ -13,15 +13,15 @@ function validarFormulario(event) {
         // Prevenir el envío del formulario
         event.preventDefault();
         
-        // Mostrar un mensaje de error si los campos están vacíos
+        // Mostrar un mensaje de error si los cmpos están vacíos
         alert("Por favor, complete todos los campos.");
         return false;
     }
     
     // Validar si las credenciales coinciden con las variables estáticas
     if (username === usuarioEstático && password === contraseñaEstática) {
-        // Si las credenciales son correctas, redirigir a index.html de la carpeta Web
-        window.location.href = "../Web/index.html";  // Redirige al index.html en la carpeta Web
+        // Si las credenciales son correctas, redirigir a index.html
+        window.location.href = "../Web/index.html"; // Redirige a index.html en la carpeta Web
         return true;
     } else {
         // Si las credenciales no coinciden, mostrar un mensaje de error
