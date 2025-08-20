@@ -30,12 +30,12 @@ document.addEventListener('DOMContentLoaded', function() {
     mensajeBienvenida.className = 'mensaje-bienvenida';
     mensajeBienvenida.innerHTML = '¡Bienvenido a Anime Conti! 🎉';
     mensajeBienvenida.style.cssText = `
-        background: rgba(255, 215, 0, 0.2);
+        background: rgba(139, 92, 246, 0.2);
         padding: 10px 20px;
         border-radius: 25px;
         margin-top: 20px;
         font-weight: bold;
-        border: 2px solid rgba(255, 215, 0, 0.5);
+        border: 2px solid rgba(168, 85, 247, 0.5);
         animation: pulse 2s infinite;
     `;
     
@@ -57,12 +57,12 @@ document.addEventListener('DOMContentLoaded', function() {
     caracteristicas.forEach(caracteristica => {
         caracteristica.addEventListener('mouseenter', function() {
             this.style.transform = 'scale(1.05)';
-            this.style.background = 'rgba(255, 255, 255, 0.2)';
+            this.style.background = 'rgba(139, 92, 246, 0.3)';
         });
         
         caracteristica.addEventListener('mouseleave', function() {
             this.style.transform = 'scale(1)';
-            this.style.background = 'rgba(255, 255, 255, 0.1)';
+            this.style.background = 'rgba(139, 92, 246, 0.2)';
         });
     });
     

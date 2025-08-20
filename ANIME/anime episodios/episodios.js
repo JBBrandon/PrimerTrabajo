@@ -116,6 +116,13 @@ const episodiosData = {
     ]
 };
 
+// Mapeo de imágenes para cada anime
+const imagenesAnime = {
+    naruto: '../imagenes/naruto.png',
+    dragonball: '../imagenes/dragon.png',
+    onepiece: '../imagenes/onepiace.png'
+};
+
 // Variables globales
 let animeActual = 'naruto';
 let paginaActual = 1;
@@ -137,6 +144,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     inicializarPagina();
     cargarEpisodios();
+    actualizarImagenBanner();
 });
 
 // Función de inicialización
@@ -189,8 +197,20 @@ function cambiarAnime(nuevoAnime) {
     };
     tituloAnime.textContent = `Episodios de ${nombresAnime[nuevoAnime]}`;
     
+    // Actualizar imagen del banner
+    actualizarImagenBanner();
+    
     // Recargar episodios
     cargarEpisodios();
+}
+
+// Función para actualizar la imagen del banner
+function actualizarImagenBanner() {
+    const bannerImage = document.querySelector('.banner-image');
+    if (bannerImage && imagenesAnime[animeActual]) {
+        bannerImage.src = imagenesAnime[animeActual];
+        bannerImage.alt = `Episodios de ${animeActual}`;
+    }
 }
 
 // Función para cargar episodios
