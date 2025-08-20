@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Login</title>
-    <link rel="stylesheet" href="css.css"> <!-- Vincula tu archivo CSS aquí -->
+    <link rel="stylesheet" href="css.css">
 </head>
+
 <body>
 
     <h2>Iniciar Sesión</h2>
 
-    <form action="login_process.php" method="POST" onsubmit="return validarFormulario(event)">
+    <!-- Se elimina el 'action' para evitar que se envíe al servidor -->
+    <form onsubmit="return validarFormulario(event)">
         <div>
             <label for="username">Usuario:</label>
             <input type="text" id="username" name="username" placeholder="Ingrese su usuario" required>
         </div>
-        
+
         <div>
             <label for="password">Contraseña:</label>
             <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
@@ -26,7 +29,8 @@
         </div>
     </form>
 
-    <script src="java.js"></script> <!-- Vincula tu archivo JavaScript aquí -->
+    <script src="java.js"></script>
 
 </body>
+
 </html>
