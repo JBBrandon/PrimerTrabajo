@@ -17,10 +17,40 @@ body {
     padding: 20px;
 }
 
-header {
-    text-align: center;
+/* HU-01: Estilos del encabezado con imagen */
+.header-principal {
     margin-bottom: 40px;
     padding: 30px 0;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.header-image {
+    flex: 0 0 auto;
+}
+
+.banner-image {
+    width: 400px;
+    height: 200px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.banner-image:hover {
+    transform: scale(1.05);
+}
+
+.header-text {
+    text-align: center;
+    flex: 1;
+    min-width: 300px;
 }
 
 .titulo-principal {
@@ -37,6 +67,61 @@ header {
     font-size: 1.2rem;
     opacity: 0.9;
     font-style: italic;
+}
+
+/* HU-02: Estilos de la sinopsis */
+.seccion-sinopsis {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.seccion-sinopsis h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2rem;
+    color: #ffd700;
+}
+
+.sinopsis-content {
+    text-align: center;
+}
+
+.sinopsis-texto {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    opacity: 0.95;
+}
+
+.caracteristicas {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.caracteristica {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    min-width: 120px;
+}
+
+.icono {
+    font-size: 2rem;
+}
+
+.caracteristica span:last-child {
+    font-weight: bold;
+    font-size: 0.9rem;
 }
 
 .seccion-anime {
@@ -59,6 +144,7 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
+    margin-bottom: 30px;
 }
 
 .anime-card {
@@ -84,6 +170,66 @@ header {
 .anime-card p {
     opacity: 0.9;
     line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Botones individuales para cada anime */
+.btn-ver-episodios {
+    background: linear-gradient(45deg, #4ecdc4, #45b7d1);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-size: 0.9rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.btn-ver-episodios:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    background: linear-gradient(45deg, #26a69a, #1976d2);
+}
+
+.btn-ver-episodios:active {
+    transform: translateY(0);
+}
+
+/* HU-03: Estilos del botón de exploración */
+.boton-explorar {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.btn-episodios {
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-episodios:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    background: linear-gradient(45deg, #ff5252, #26a69a);
+}
+
+.btn-episodios:active {
+    transform: translateY(0);
+}
+
+.texto-boton {
+    margin-top: 15px;
+    opacity: 0.8;
+    font-style: italic;
 }
 
 footer {
@@ -93,6 +239,7 @@ footer {
     font-size: 0.9rem;
 }
 
+/* Responsive design */
 @media (max-width: 768px) {
     .titulo-principal {
         font-size: 2.5rem;
@@ -102,7 +249,57 @@ footer {
         padding: 15px;
     }
     
+    .header-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .banner-image {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+    }
+    
     .lista-animes {
         grid-template-columns: 1fr;
+    }
+    
+    .caracteristicas {
+        gap: 15px;
+    }
+    
+    .caracteristica {
+        min-width: 100px;
+        padding: 10px;
+    }
+    
+    .btn-episodios {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+    
+    .btn-ver-episodios {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo-principal {
+        font-size: 2rem;
+    }
+    
+    .seccion-sinopsis,
+    .seccion-anime {
+        padding: 20px;
+    }
+    
+    .caracteristicas {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .anime-card {
+        padding: 15px;
     }
 }

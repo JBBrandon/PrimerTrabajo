@@ -8,27 +8,78 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1 class="titulo-principal">🎌 Anime Conti 🎌</h1>
-            <p class="subtitulo">Tu portal de anime favorito</p>
+        <header class="header-principal">
+            <!-- HU-01: Imagen y título del encabezado -->
+            <div class="header-content">
+                <div class="header-image">
+                    <img src="https://via.placeholder.com/400x200/667eea/ffffff?text=Anime+Conti" alt="Anime Conti Banner" class="banner-image">
+                </div>
+                <div class="header-text">
+                    <h1 class="titulo-principal">🎌 Anime Conti 🎌</h1>
+                    <p class="subtitulo">Tu portal de anime favorito</p>
+                </div>
+            </div>
         </header>
         
         <main>
+            <!-- HU-02: Sinopsis breve del anime -->
+            <section class="seccion-sinopsis">
+                <h2>¿Qué es Anime Conti?</h2>
+                <div class="sinopsis-content">
+                    <p class="sinopsis-texto">
+                        Anime Conti es tu destino definitivo para descubrir y disfrutar de los mejores animes japoneses. 
+                        Desde clásicos legendarios hasta las últimas novedades, ofrecemos una experiencia única con 
+                        episodios completos, reseñas detalladas y una comunidad apasionada por el anime.
+                    </p>
+                    <div class="caracteristicas">
+                        <div class="caracteristica">
+                            <span class="icono">🎬</span>
+                            <span>Episodios Completos</span>
+                        </div>
+                        <div class="caracteristica">
+                            <span class="icono">⭐</span>
+                            <span>Calificaciones</span>
+                        </div>
+                        <div class="caracteristica">
+                            <span class="icono">📱</span>
+                            <span>Multiplataforma</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section class="seccion-anime">
                 <h2>Animes Populares</h2>
                 <div class="lista-animes">
                     <div class="anime-card">
                         <h3>Naruto</h3>
                         <p>Ninja legendario en busca de su destino</p>
+                        <button class="btn-ver-episodios" onclick="irAepisodiosAnime('naruto')">
+                            🎬 Ver Episodios
+                        </button>
                     </div>
                     <div class="anime-card">
                         <h3>Dragon Ball</h3>
                         <p>Aventuras épicas del guerrero Saiyajin</p>
+                        <button class="btn-ver-episodios" onclick="irAepisodiosAnime('dragonball')">
+                            🎬 Ver Episodios
+                        </button>
                     </div>
                     <div class="anime-card">
                         <h3>One Piece</h3>
                         <p>Búsqueda del tesoro más grande del mundo</p>
+                        <button class="btn-ver-episodios" onclick="irAepisodiosAnime('onepiece')">
+                            🎬 Ver Episodios
+                        </button>
                     </div>
+                </div>
+                
+                <!-- HU-03: Botón para explorar más contenido -->
+                <div class="boton-explorar">
+                    <button class="btn-episodios" onclick="irAepisodios()">
+                        🎬 Ver Todos los Episodios
+                    </button>
+                    <p class="texto-boton">Descubre cientos de episodios de tus animes favoritos</p>
                 </div>
             </section>
         </main>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Episodios - Anime Conti</title>
+    <link rel="stylesheet" href="episodios.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header-episodios">
+            <div class="header-content">
+                <div class="header-image">
+                    <img src="https://via.placeholder.com/400x200/667eea/ffffff?text=Episodios" alt="Episodios Banner" class="banner-image">
+                </div>
+                <div class="header-text">
+                    <h1 class="titulo-principal">🎬 Episodios Completos</h1>
+                    <p class="subtitulo">Disfruta de todos los capítulos de tus animes favoritos</p>
+                    <a href="../animes.html" class="btn-volver">← Volver a Animes</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Selector de anime -->
+            <section class="selector-anime">
+                <h2>Selecciona un Anime</h2>
+                <div class="anime-buttons">
+                    <button class="btn-anime active" data-anime="naruto">Naruto</button>
+                    <button class="btn-anime" data-anime="dragonball">Dragon Ball</button>
+                    <button class="btn-anime" data-anime="onepiece">One Piece</button>
+                </div>
+            </section>
+
+            <!-- Lista de episodios -->
+            <section class="seccion-episodios">
+                <h2 id="titulo-anime">Episodios de Naruto</h2>
+                
+                <!-- HU-04: Listado básico de episodios -->
+                <div class="lista-episodios" id="lista-episodios">
+                    <!-- Los episodios se cargarán dinámicamente -->
+                </div>
+
+                <!-- HU-06: Navegación entre episodios -->
+                <div class="navegacion-episodios">
+                    <button class="btn-nav" id="btn-anterior" disabled>← Anterior</button>
+                    <div class="info-pagina">
+                        <span id="pagina-actual">1</span> de <span id="total-paginas">1</span>
+                    </div>
+                    <button class="btn-nav" id="btn-siguiente">Siguiente →</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Anime Conti - Todos los derechos reservados</p>
+        </footer>
+    </div>
+
+    <script src="episodios.js"></script>
+</body>
+</html>
