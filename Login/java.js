@@ -20,8 +20,8 @@ function validarFormulario(event) {
     
     // Validar si las credenciales coinciden con las variables estáticas
     if (username === usuarioEstático && password === contraseñaEstática) {
-        // Si las credenciales son correctas, permitir el envío del formulario
-        alert("¡Bienvenido!");
+        // Si las credenciales son correctas, redirigir a index.html de la carpeta Web
+        window.location.href = "../Web/index.html";  // Redirige al index.html en la carpeta Web
         return true;
     } else {
         // Si las credenciales no coinciden, mostrar un mensaje de error
@@ -30,4 +30,3 @@ function validarFormulario(event) {
         return false;
     }
 }
-
